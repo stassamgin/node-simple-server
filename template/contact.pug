@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        title Contact
+        link(rel="stylesheet" href="/css/style.css")
+    body
+        header
+            h2 NailFashion
+            nav
+                ul
+                    li
+                        a(href="/about") Обо мне
+                    li
+                        a(href="/works") Мои работы
+                    li
+                        a(href="/contact") Контакты
+                    li
+                        a(href="/services") Услуги
+        main
+            h1 Contact
+            form(action="/contact/handler" method="POST")
+                input(type="text" name="text")
+                button(type="submit") ADD TEXT
+            ul
+                each item in store
+                    li #{item.text}
